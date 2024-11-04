@@ -1,5 +1,5 @@
 import {Component, inject} from '@angular/core';
-import {NgIf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
 import {Author} from "./model/author";
 import {AuthorsService} from "./service/authors.service";
 import {concatMap, switchMap} from "rxjs";
@@ -15,7 +15,8 @@ interface AuthorWrapper {
   standalone: true,
   templateUrl: './authors.component.html',
   imports: [
-    NgIf
+    NgIf,
+    NgForOf
   ],
   styleUrl: './authors.component.css'
 })
